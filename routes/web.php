@@ -4,12 +4,17 @@ use App\Http\Controllers\Main\CartController;
 use App\Http\Controllers\Main\CheckoutController;
 use App\Http\Controllers\Main\GoodController;
 use App\Http\Controllers\Main\IndexController;
+use App\Http\Controllers\Main\HomeController;
 use App\Http\Controllers\Main\Profile\ProfileController;
 use App\Http\Controllers\Main\Profile\WalletController;
 use Illuminate\Support\Facades\Route;
 
+Route::controller(HomeController::class)->group(function () {
+    Route::get('', 'index')->name('home.index');
+});
+
 Route::controller(IndexController::class)->group(function () {
-    Route::get('', 'dashboard')->name('index.dashboard');
+    Route::get('dashboard', 'dashboard')->name('index.dashboard');
     Route::get('category/{category}', 'category')->name('index.category');
 });
 

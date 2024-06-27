@@ -32,7 +32,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans]
             },
             rotate: {
                 '-1': '-1deg',
