@@ -30,9 +30,9 @@
                 <div class="shop-categories__mobile md:hidden">
                     <div class="category-title flex justify-between">
                         <h3 class="text-[#222222] font-semibold text-[16px] mb-[30px]">Categories</h3>
-                        <span @click="isFooterOpen('categories')" class="t4s-footer-collapse-icon"></span>
+                        <span @click="isFooterOpen($event,'categories')" class="t4s-footer-collapse-icon"></span>
                     </div>
-                    <ul class="order-list flex flex-col gap-[10px]">
+                    <ul class="order-list__categories flex flex-col gap-[10px]">
                        <li>Men</li> 
                        <li>Women</li> 
                        <li>Accessories</li> 
@@ -49,7 +49,10 @@
 <script setup lang="ts">
 import { Head, Link, useForm, usePage } from '@inertiajs/vue3'
 
-function isFooterOpen($event, string categories){
+function isFooterOpen($event: Event, type: string){
+    switch(type){
+        case 'categories':
+    }
     console.log('abcad');
 };
 
