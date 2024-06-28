@@ -13,6 +13,8 @@ import ResponsiveCategories from '@/Components/ResponsiveCategories.vue'
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 import SecondaryButton from '@/Components/SecondaryButton.vue'
 import { PageProps } from '@/types'
+import TopHeader from '@/Layouts/TopHeader.vue';
+import Footer from '@/Layouts/Footer.vue';
 
 defineProps<{ title: string }>()
 
@@ -64,11 +66,9 @@ const searchGoods = () => form.get(route('goods.search'))
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div class="min-h-screen">
         <notifications position="top right" />
-
-        <Head :title="title" />
-
+        <TopHeader/>
         <header class="border-b border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
             <!-- Primary Navigation Menu -->
             <div class="mx-auto max-w-9xl px-4 sm:px-6 lg:px-8">
@@ -194,6 +194,7 @@ const searchGoods = () => form.get(route('goods.search'))
                                 :href="route('register')"
                                 class="mx-2 inline-flex items-center justify-center rounded-lg bg-gray-50 px-3 py-2.5 text-sm font-semibold uppercase tracking-wider text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                             >
+                            
                                 Sign Up
                             </Link>
                             <Link
@@ -311,7 +312,7 @@ const searchGoods = () => form.get(route('goods.search'))
         <main class="mx-auto max-w-9xl">
             <slot />
         </main>
-
+        <Footer/>
         <cart
             v-if="cart"
             :show="cartModal"

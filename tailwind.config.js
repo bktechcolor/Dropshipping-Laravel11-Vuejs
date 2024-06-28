@@ -75,10 +75,12 @@ export default {
                 450: '450ms'
             },
             colors: {
+                white: colors.white,
                 danger: colors.rose,
                 primary: colors.purple,
                 success: colors.green,
-                warning: colors.yellow
+                warning: colors.yellow,
+                gray: colors.gray
             }
         },
         screens: {

@@ -1,3 +1,4 @@
+import '../css/global.css'
 import './bootstrap'
 import '../css/app.css'
 

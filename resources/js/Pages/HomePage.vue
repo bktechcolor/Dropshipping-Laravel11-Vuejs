@@ -1,21 +1,11 @@
 <template>
-    <TopHeader>
+    <authenticated-layout title="Dashboard">
 
-    </TopHeader>
-    <!-- <swiper
-      :slides-per-view="3"
-      :space-between="50"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
-    >
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-    </swiper> -->
-    div
+      sdfasdfsadfasdf
+    </authenticated-layout>
 </template>
 <script setup lang="ts">
-import TopHeader from '@/Components/TopHeader.vue';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 </script>
 <style scoped>
 </style>
